@@ -17,5 +17,8 @@
     "url": "https://github.com/tfs18/CLI-TextBasedAdventureGame/issues"
   },
   "homepage": "https://github.com/tfs18/CLI-TextBasedAdventureGame#readme",
-  "description": ""
+  "description": "How to run the game:\r open the game script\r run npm init -y (in the terminal)\r run npm i inquirer (in the terminal)\r add this line of code to the package.json file: \"type\": \"module\",\r run node game.js (in the terminal)",
+  "dependencies": {
+    "inquirer": "^12.9.0"
+  }
 }

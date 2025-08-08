@@ -126,8 +126,161 @@ const scenarios = [
 
     {
         name: 'castleIntro',
-        message: 'work in progress..',
-        choices: []
+        message: 'You wake up in a castle. You see a spiral staircase leading up and down. Which way do you go?',
+        choices: [
+            {name: 'Go up', nextScenario: 'up'},
+            {name: 'Go down', nextScenario: 'down'}
+        ]
+    },
+
+    {
+        name: 'down',
+        message: 'You find a basement with a tiny teeny door and a huge door, which door do you want to open?',
+        choices: [
+            {name: 'Tiny door', nextScenario: 'tinyDoor'},
+            {name: 'Huge door', nextScenario: 'hugeDoor'}
+        ]
+    },
+
+    {
+        name: 'up',
+        message: 'You find an ominous scarecrow. Under it, there is a treasure chest. Do you fight your fears and open it or leave it?',
+        choices: [
+            {name: 'Open it', nextScenario: 'curse'},
+            {name: 'Leave it', nextScenario: 'leave'}
+        ]
+    },
+    
+    {
+        name: 'tinyDoor',
+        message: 'There are 2 items of food in front of you: a cake and a soda. Which one will you have?',
+        choices: [
+            {name: 'cake', nextScenario: 'cake'},
+            {name: 'soda', nextScenario: 'soda'}
+        ]
+    },
+     {
+        name: 'cake',
+        message: 'You have grown into a giant and cannot fit through the door. Do you want to drink some soda or break the door down?',
+        choices: [
+            {name: 'Break the door down', nextScenario: 'break'},
+            {name: 'Drink some soda', nextScenario: 'soda'}
+        ]
+    },
+
+       {
+        name: 'help',
+        message: 'The villagers offer you help and feed you soda to shrink you. Will you thank them?',
+        choices: [
+            {name: 'Express gratitude', nextScenario: 'escape'},
+            {name: 'Leave', nextScenario: 'castle-intro'}
+        ]
+    },
+     {
+        name: 'break',
+        message: 'You have just destroyed the tiny people village and they think you are a tyrant. What di you do?',
+        choices: [
+            {name: 'Apologise and help rebuild their houses', nextScenario: 'help'},
+            {name: 'Kill all of them', nextScenario: 'kill'}
+        ]
+    },
+     {
+        name: 'kill',
+        message: 'Your punishment is to be stuck here forever',
+        choices: [
+            {name: 'Punishment', nextScenario: 'loop'},
+        ]
+    },
+     {
+        name: 'loop',
+        message: 'Your punishment is to be stuck here forever',
+        choices: [
+            {name: 'Punishment', nextScenario: 'kill'},
+        ]
+    },
+
+
+     {
+        name: 'soda',
+        message: 'You shrunk! You can easily fit through the door now. Do you want to eat cake or go through the door?',
+        choices: [
+            {name: 'Go through the door', nextScenario: 'elf'},
+            {name: 'Eat cake', nextScenario: 'cake'}
+        ]
+    },
+
+     {
+        name: 'hugeDoor',
+        message: 'This door leads to the lands of giants! Do you want to meet them?',
+        choices: [
+            {name: 'meet giants', nextScenario: 'giant'},
+            {name: 'no giants', nextScenario: 'down'}
+        ]
+    },
+    {
+        name: 'giant',
+        message: 'The giant has been betrayed by another called Jack. He wants to eat you. Do you..?',
+        choices: [
+            {name: 'Gift him a golden harp', nextScenario: 'sing'},
+            {name: 'Run away', nextScenario: 'down'},
+            {name: 'Fight him', nextScenario: 'fight'}
+        ]
+    },
+
+    {
+        name: 'fight',
+        message: 'You decided to stay honourable and fight the giant. What do you choose as your weapon?',
+        choices: [
+            {name: 'An iron axe', nextScenario: 'angrygiant'},
+            {name: 'Excallibur', nextScenario: 'escape'}
+        ]
+    },
+
+      {
+        name: 'angrygiant',
+        message: 'You did not even injure the giant in the slightest and now he is angry at you and has you pinned. What will you do?',
+        choices: [
+            {name: 'Accept your fate', nextScenario: 'death'},
+            {name: 'Go against your fate', nextScenario: 'fight'}
+        ]
+    },
+
+      {
+        name: 'death',
+        message: 'You died',
+        choices: [
+        ]
+    },
+
+     {
+        name: 'curse',
+        message: 'This treasure is cursed! You have died x.x',
+        choices: [
+        ]
+    },
+
+     {
+        name: 'leave',
+        message: 'You left the treasure. As you were not greedy the scarecrow has decided to grant you a wish... Do you trust the scarecrow?',
+        choices: [
+            {name: 'Trust the scarecrow and get a wish', nextScenario: 'wish'},
+            {name: 'Politely refuse his wish', nextScenario: 'nog'},
+            {name: 'Run away', nextScenario: 'down'}
+        ]
+    },
+
+     {
+        name: 'wish',
+        message: 'Your wish is granted you can escape the game',
+        choices: [
+            {name: 'Escape', nextScenario: 'escape'}
+        ]
+    },
+      {
+        name: 'escape',
+        message: 'Well done you won!',
+        choices: [
+        ]
     },
 
     // Forest --------------------------------------------------------
