@@ -159,7 +159,8 @@ const scenarios = [
             {name: 'soda', nextScenario: 'soda'}
         ]
     },
-     {
+    
+    {
         name: 'cake',
         message: 'You have grown into a giant and cannot fit through the door. Do you want to drink some soda or break the door down?',
         choices: [
@@ -168,7 +169,7 @@ const scenarios = [
         ]
     },
 
-       {
+    {
         name: 'help',
         message: 'The villagers offer you help and feed you soda to shrink you. Will you thank them?',
         choices: [
@@ -176,7 +177,8 @@ const scenarios = [
             {name: 'Leave', nextScenario: 'castle-intro'}
         ]
     },
-     {
+    
+    {
         name: 'break',
         message: 'You have just destroyed the tiny people village and they think you are a tyrant. What di you do?',
         choices: [
@@ -184,14 +186,16 @@ const scenarios = [
             {name: 'Kill all of them', nextScenario: 'kill'}
         ]
     },
-     {
+    
+    {
         name: 'kill',
         message: 'Your punishment is to be stuck here forever',
         choices: [
             {name: 'Punishment', nextScenario: 'loop'},
         ]
     },
-     {
+    
+    {
         name: 'loop',
         message: 'Your punishment is to be stuck here forever',
         choices: [
@@ -199,8 +203,7 @@ const scenarios = [
         ]
     },
 
-
-     {
+    {
         name: 'soda',
         message: 'You shrunk! You can easily fit through the door now. Do you want to eat cake or go through the door?',
         choices: [
@@ -209,7 +212,7 @@ const scenarios = [
         ]
     },
 
-     {
+    {
         name: 'hugeDoor',
         message: 'This door leads to the lands of giants! Do you want to meet them?',
         choices: [
@@ -217,6 +220,7 @@ const scenarios = [
             {name: 'no giants', nextScenario: 'down'}
         ]
     },
+    
     {
         name: 'giant',
         message: 'The giant has been betrayed by another called Jack. He wants to eat you. Do you..?',
@@ -236,7 +240,7 @@ const scenarios = [
         ]
     },
 
-      {
+    {
         name: 'angrygiant',
         message: 'You did not even injure the giant in the slightest and now he is angry at you and has you pinned. What will you do?',
         choices: [
@@ -245,21 +249,19 @@ const scenarios = [
         ]
     },
 
-      {
+    {
         name: 'death',
         message: 'You died',
-        choices: [
-        ]
+        choices: []
     },
 
-     {
+    {
         name: 'curse',
         message: 'This treasure is cursed! You have died x.x',
-        choices: [
-        ]
+        choices: []
     },
 
-     {
+    {
         name: 'leave',
         message: 'You left the treasure. As you were not greedy the scarecrow has decided to grant you a wish... Do you trust the scarecrow?',
         choices: [
@@ -269,18 +271,18 @@ const scenarios = [
         ]
     },
 
-     {
+    {
         name: 'wish',
         message: 'Your wish is granted you can escape the game',
         choices: [
             {name: 'Escape', nextScenario: 'escape'}
         ]
     },
-      {
+    
+    {
         name: 'escape',
         message: 'Well done you won!',
-        choices: [
-        ]
+        choices: []
     },
 
     // Forest --------------------------------------------------------
